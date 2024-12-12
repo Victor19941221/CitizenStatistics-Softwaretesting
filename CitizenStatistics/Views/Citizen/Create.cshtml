@@ -1,0 +1,18 @@
+@model Citizen
+
+@{
+    ViewBag.Title = "Create Citizen";
+    Layout = "_Layout";
+}
+
+<h2>Create Citizen</h2>
+
+<form asp-controller="Citizen" asp-action="Create">
+    <label for="age">Age</label>
+    <input type="number" id="age" name="age"/>
+    <label for="income">Income</label>
+    <input type="number" id="income" name="income"/>
+    <label for="profession">Profession</label>
+    <input type="text" id="profession" name="profession"/>
+    <input type="submit" value="Submit"/>
+</form>

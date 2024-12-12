@@ -1,0 +1,24 @@
+﻿@model Statistics
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>Home</h2>
+<p>Average Age: @Model.AverageAge</p>
+<p>Median Age: @Model.MedianAge</p>
+<p>Highest Income: @Model.HighestIncome</p>
+<p>Lowest Income: @Model.LowestIncome</p>
+@if (@Model.TopPayingProfessions.Length == 0)
+{
+    <p>No professions found...</p>   
+}
+else
+{
+    <p>Top paying professions</p>   
+    <ol>
+        @foreach (var profession in @Model.TopPayingProfessions)
+        {
+            <li>@profession</li>
+        }
+    </ol>
+}

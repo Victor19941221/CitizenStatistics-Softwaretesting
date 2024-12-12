@@ -1,0 +1,33 @@
+@model Citizen
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>Delete Citizen</h2>
+<table>
+    <tr>
+        <th>Age</th>
+        <th>Income</th>
+        <th>Profession</th>
+    </tr>
+    <tr>
+        <td>@Model.Age</td>
+        <td>@Model.Income</td>
+        <td>@Model.Profession</td>
+    </tr>
+</table>
+
+
+<p>Are you sure?</p>
+<div class="flex-container">
+    <form class="flex-item danger" asp-controller="Citizen" asp-action="Delete">
+        <input type="hidden" id="id" name="id" value="@Model.Id"/>
+        <input type="submit" value="Delete"/>
+    </form>
+    <a class="flex-item" asp-controller="Citizen" asp-action="Index">
+        <button>Cancel</button>
+    </a>    
+</div>
+

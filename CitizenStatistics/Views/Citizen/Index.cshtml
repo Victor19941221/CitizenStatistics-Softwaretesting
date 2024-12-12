@@ -1,0 +1,29 @@
+@model IList<Citizen>
+@{
+    ViewBag.Title = "Citizen";
+    Layout = "_Layout";
+}
+
+<h2>Citizen</h2>
+
+<a asp-controller="Citizen" asp-action="Create">Add Citizen</a>
+
+<table>
+    <tr>
+        <th>Age</th>
+        <th>Income</th>
+        <th>Profession</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    @foreach (var citizen in Model)
+    {
+        <tr>
+            <td>@citizen.Age</td>
+            <td>@citizen.Income</td>
+            <td>@citizen.Profession</td>
+            <td><a asp-controller="Citizen" asp-action="Edit" asp-route-id="@citizen.Id">Edit</a></td>
+            <td><a asp-controller="Citizen" asp-action="Delete" asp-route-id="@citizen.Id">Delete</a></td>
+        </tr>
+    }
+</table>

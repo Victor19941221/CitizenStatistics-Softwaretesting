@@ -132,19 +132,6 @@ The application uses SQLite as its database. The database file `citizensData.db`
 1. Navigate to the "Citizen" page.
 2. Click "Edit" or "Delete" next to the desired citizen.
 
-## Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository.
-2. Create a feature branch.
-3. Commit your changes.
-4. Push the branch and create a pull request.
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.
-
 ## Pictures
 
 Here is a screenshot showing the results of the tests
